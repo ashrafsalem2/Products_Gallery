@@ -1,1 +1,26 @@
-<p>products works!</p>
+<section>
+    <h2>Popular Products</h2>
+    <div class=" grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+        @for (prod of prod; track $index)
+         {
+            <div class="card border border-gray-400/50 rounded-md overflow-hidden shadow relative">
+                <div class="card-image">
+                    <img [src]="prod.image" [alt]="prod.title" class="w-full h-[250px] object-contain">
+                </div>
+                <div class="card_body px-2 py-4">
+                    <h4 class="text-yellow-500 text-sm">{{ prod.title.split(" ", 3).join(' ')}}</h4>
+                    <h3 class="font-medium">{{ prod.description.split(" ", 3).join(' ') }}</h3>
+                    <div class="flex justify-between item-center">
+                        <span>{{ prod.price }} EGP</span>
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-100"></i>
+                            <span class="text-gray-500">{{ prod.rating.rate }}</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="bg-yellow-600 text-white text-sm rounded px-3 py-2 w-[90%] mx-auto block">Display Product</button>
+            </div>
+         }
+        
+    </div>
+</section>

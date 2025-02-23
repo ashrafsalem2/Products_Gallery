@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { initFlowbite } from 'flowbite';
+import { FlowbiteService } from './core/services/flowbit/flowbite.service';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +9,15 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'ProductGallery';
+
+  constructor(private flowbiteService: FlowbiteService) {}
+
+  ngOnInit(): void {
+    this.flowbiteService.loadFlowbite(flowbite => {
+      // Your custom code here
+      console.log('Flowbite loaded', flowbite);
+    });
+  }
 }
