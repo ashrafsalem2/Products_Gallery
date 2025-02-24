@@ -1,1 +1,19 @@
-<p>details works!</p>
+<div class="w-11/12 mx-auto">
+    <div class="row item-center my-5">
+        <div class="md:w-1/4 p-3">
+            <img [src]=" prod.image " class="w-full" alt="">
+        </div>
+        <div class="md-w-3/4 p-3">
+            <h1 class="text-lg font-bold my-3">{{ prod.title }}</h1>
+            <p class="text-yellow-600 text-sm">{{ prod.description }}</p>
+            <span class="text-sm text-yellow-800">{{ prod.category }}</span>
+            <div class="flex justify-between items-center">
+                <span>{{ prod.price }} EGP</span>
+                <span><i class="fa fa-star text-yellow-400"></i>{{ prod.rating.rate }}</span>
+            </div>
+            <button class="w-full bg-yellow-600 text-white text-1xl py-2 mt-2 rounded-md" routerLink="/products">
+                Back
+            </button>
+        </div>
+    </div>
+</div>

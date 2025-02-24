@@ -17,7 +17,7 @@ export class ProductsService {
   //https://fakestoreapi.com/products/1
 
   getSpecificProduct(id: number): Observable<any> {
-    return this._HttpClient.get(`${environment.baseUrl}/products/${id}`)
+    return this._HttpClient.get(`https://fakestoreapi.com/products/${id}`)
   }
 
 }
