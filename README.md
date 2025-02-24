@@ -1,8 +1,8 @@
 # ProductGallery
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
-this App Display All products inside my store 
-has a way to search with title
+this App Display All products inside my store </br>
+has a way to search with title</br>
 and display each element details
 
 ## Development server
